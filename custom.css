@@ -1,0 +1,74 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. */
+
+
+/* 
+GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+
+/* 
+DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go here */
+}
+
+hgroup {
+	width:100%;
+}
+.site-contacts {
+	float: right;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: #424043;
+	text-align: right;
+}
+
+.site-footer {
+	float: right;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	color: #424043;
+	text-align: right;
+}
+
+.site-footer_contacts {
+	float: right;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 30px;
+	color: #424043;
+	text-align: left;
+}
+
+
+#main-nav {
+	text-align: center;
+}
+
+#main-nav .sub-menu li {
+	text-align: left;
+}
+#main { width: auto; }
+
+.single-product .images { width: 30%; }
+
+.overridewidth .col-left { float: none}
+
+@media only screen and (max-width:768px) {
+    .single-product .images { width: 100%; }    
+}
+
