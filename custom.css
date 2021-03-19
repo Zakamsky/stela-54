@@ -72,3 +72,80 @@ hgroup {
     .single-product .images { width: 100%; }    
 }
 
+/* == 19.03.2021 == */
+
+/* price */
+.woocommerce-Price-amount{
+	color: #d60000;
+	font-size: 17px;
+}
+.price ins .amount{
+	color: #ff4800;
+}
+
+/* contact form */
+@media (max-width: 400px) {
+	#contact_form_pop{
+		padding: 9%;
+	}
+
+	#contact_form_pop .wpcf7-form-control{
+		max-width: 100%;
+		margin: 0;
+	}
+}
+
+/* footer menu */
+
+#menu-futer-menyu{
+	display: none;
+}
+@media (min-width: 992px){
+	#footer-widgets{
+		padding: 20px 0;
+
+	}
+	#footer-widgets .widget_nav_menu{
+		margin: 0;
+	}
+	#menu-futer-menyu{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -14px;
+	}
+	#menu-futer-menyu ul{
+		margin: 0;
+		padding: 0;
+	}
+	#menu-futer-menyu .menu-item:before{
+		display: none;
+	}
+
+	#menu-futer-menyu .menu-item > a{
+		display: block;
+		padding: .5em 1em;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	#menu-futer-menyu .menu-item-has-children{
+		display: flex;
+	}
+}
+
+/* search */
+
+#top #searchform {
+	display: flex;
+}
+#top #searchform .input-text{
+	padding: .236em .7em;
+}
+#top #searchform .button{
+	display: block;
+	position: static;
+	padding: .236em .5em;
+	width: auto;
+}
+
+/* top menu */
+

@@ -92,7 +92,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
       
       <?php } ?>
       </div>
-            <!-- i am here -->
+            
     </footer>
 	
 	</div><!-- / footer-wrap -->
