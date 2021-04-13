@@ -48,7 +48,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				<div class="site-footer">
 					<div class="site-footer__call">
 						<h4>Закажите обратный звонок!</h4>
-						<a id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline"><img src="http://stela-54.ru/wp-content/uploads/2016/06/knop.png"></a>
+						<a id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline button callback-btn">Заказать звонок</a>
 						<div style="display:none" class="fancybox-hidden">
 							<div id="contact_form_pop">
 								<?php echo do_shortcode('[contact-form-7 id="1218"]'); ?>
@@ -67,7 +67,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				</div>
 				<p><img src="https://stela-54.ru/wp-content/uploads/2016/06/stella-255.png"></p>
 				<p>
-					<b>Адреса:</b> г. Новосибирск, ул. Мочищенское шоссе, 5/17,</br>
+					<b>Адреса:</b> <br/> г. Новосибирск, ул. Мочищенское шоссе, 5/17,</br>
 					г. Новосибирск, ул. Новоуральская, 121,</br>
 					г. Новосибирск, ул. Новоуральская, 124, корп.1</br>
 					<b>Тел.:</b> <a href="tel:+79137508333">+7 (913) 750-83-33</a></br>

@@ -147,5 +147,56 @@ hgroup {
 	width: auto;
 }
 
-/* top menu */
+/* callback btn */
 
+.button.callback-btn {
+	margin-top: 10px;
+	border: none;
+	box-shadow: none;
+}
+
+/* header top menu */
+
+#top-nav .menu-item a {
+	font-size: 1.15em;
+}
+
+/* header category menu */
+
+#header #navigation.header__categories-wrapper {
+	/*display: flex !important; */ /* <= this style breaks the mobile menu*/
+	display: flex;
+	float: unset !important;
+	clear: both !important;
+}
+
+#header #navigation.header__categories-wrapper ul {
+	margin: 0 auto;
+	float: unset;
+}
+
+/* callback-form popup */
+
+br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
+	margin-top: 20px;
+}
+
+/* logo */
+
+#logo.logo {
+	display: grid;
+	font-family: "Open Sans", sans-serif;
+}
+
+#logo .logo__title {
+	font-size: 80px;
+	line-height: 80px;
+	text-transform: uppercase;
+}
+
+#logo .logo__description {
+	padding-left: 5px;
+	font-size: 20px;
+	line-height: 20px;
+	text-transform: uppercase;
+}

@@ -17,6 +17,7 @@ global $woo_options, $woocommerce;
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="<?php if ( $woo_options['woo_boxed_layout'] == 'true' ) echo 'boxed'; ?> <?php if (!class_exists('woocommerce')) echo 'woocommerce-deactivated'; ?>">
 <head>
+    <meta name="google-site-verification" content="i1qbHfza4eNi7MKWLAEf3CeDH0dDBN-P8lNSYern8-8" />
 <meta name="yandex-verification" content="f844fd4992f64e14" />
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
@@ -98,8 +99,9 @@ global $woo_options, $woocommerce;
 				if ( isset( $woo_options['woo_logo'] ) && $woo_options['woo_logo'] != '' && is_ssl() ) { $logo = preg_replace("/^http:/", "https:", $woo_options['woo_logo']); }
 			?>
 			<?php if ( ! isset( $woo_options['woo_texttitle'] ) || $woo_options['woo_texttitle'] != 'true' ) { ?>
-			    <a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
-			    	<img src="<?php echo $logo; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+			    <a class="logo" id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
+			    	<span class="logo__title">Стела</span>
+			    	<span class="logo__description">Гранитная мастерская</span>
 			    </a>
 		    <?php } ?>
 
@@ -109,7 +111,7 @@ global $woo_options, $woocommerce;
 			<div class="site-contacts">
 			<div> <a href="tel:+79137508333">+7 (913) 750-83-33</a> </div>
 			<div> <a href="mailto:stela-54@yandex.ru">stela-54@yandex.ru</a></div>
-			<a id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline" ><img src="https://stela-54.ru/wp-content/uploads/2016/06/knop.png" ></a>
+			<a class="button callback-btn" id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline" >Заказать звонок</a>
 			<div style="display:none" class="fancybox-hidden">
   			<div id="contact_form_pop">
     			<?php echo do_shortcode(' [contact-form-7 id="1218"]'); ?>
@@ -123,7 +125,7 @@ global $woo_options, $woocommerce;
 
         <?php woo_nav_before(); ?>
 
-		<nav id="navigation" class="col-full" role="navigation">
+		<nav id="navigation" class="col-full header__categories-wrapper" role="navigation">
 
 			<?php
 			if ( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary-menu' ) ) {
