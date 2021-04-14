@@ -373,4 +373,18 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		font-size: 14px;
 		line-height: 1.25em;
 	}
+
+	.site-footer__call{
+		display: none;
+	}
+	#footer>p:first-of-type>img{
+		display: none;
+	}
+	#footer-widgets{
+		padding: 0;
+	}
+
+	.woocommerce-ordering .orderby{
+		max-width: 100%
+	}
 }
