@@ -109,16 +109,17 @@ global $woo_options, $woocommerce;
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			
 			<div class="site-contacts">
-			<div> <a href="tel:+79137508333">+7 (913) 750-83-33</a> </div>
-			<div> <a href="mailto:stela-54@yandex.ru">stela-54@yandex.ru</a></div>
-			<a class="button callback-btn" id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline" >Заказать звонок</a>
+			<div> <a class="site-contacts__link --tel" href="tel:+79137508333">+7 (913) 750-83-33</a> </div>
+			<div> <a class="site-contacts__link --whatsapp" href="whatsapp://send?phone=+79137508333">WhatsApp</a> </div>
+			<div> <a class="site-contacts__link --email" href="mailto:stela-54@yandex.ru">stela-54@yandex.ru</a></div>
+			<a class="button callback-btn site-contacts__link --call-back" id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline" >Заказать звонок</a>
 			<div style="display:none" class="fancybox-hidden">
   			<div id="contact_form_pop">
     			<?php echo do_shortcode(' [contact-form-7 id="1218"]'); ?>
   			</div>
 			</div>
 			</div>	
-		
+		    <button type="button" class="search-toggle"></button>
 			<h3 class="nav-toggle"><a href="#navigation"><mark class="websymbols">&#178;</mark> <span><?php _e('Navigation', 'woothemes'); ?></span></a></h3>
 
 		</hgroup>

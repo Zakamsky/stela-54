@@ -19,11 +19,11 @@ jQuery(document).ready(function($){
 
 
 	// Responsive Navigation (switch top drop down for select)
-	jQuery('ul#top-nav').mobileMenu({
-		switchWidth: 767,                   //width (in px to switch at)
-		topOptionText: 'Выберите страницу',     //first option text
-		indentString: '&nbsp;&nbsp;&nbsp;'  //string for indenting nested items
-	});
+	// jQuery('ul#top-nav').mobileMenu({
+	// 	switchWidth: 767,                   //width (in px to switch at)
+	// 	topOptionText: 'Выберите страницу',     //first option text
+	// 	indentString: '&nbsp;&nbsp;&nbsp;'  //string for indenting nested items
+	// });
 
 
 
@@ -43,4 +43,47 @@ jQuery(document).ready(function($){
     // Add parent class to nav parents
 	jQuery("ul.sub-menu, ul.children").parents().addClass('parent');
 
+
+	/// ===== custom styles for mobile menu
+
+	// submenu to menu:
+
+
+	const colFull = document.querySelector('.col-full')
+	const topNav = document.getElementById('top-nav')
+	const navigation = document.getElementById('navigation')
+
+	const footer = document.querySelector('.site-footer')
+	const socialLinks = document.querySelector('.site-footer__social-links')
+
+	const mobileMenuConstructor = function() {
+		if (document.documentElement.clientWidth <= 767){
+			navigation.appendChild(topNav)
+			navigation.appendChild(socialLinks)
+			navigation.style.display = 'none'
+		} else {
+			colFull.prepend(topNav)
+			footer.appendChild(socialLinks)
+		}
+	}
+
+	mobileMenuConstructor()
+
+	window.addEventListener('resize', function () {
+		mobileMenuConstructor()
+	} )
+
+	//search button
+
+	const searchToggle = document.querySelector('.search-toggle')
+	const searchBar = document.querySelector('#top li.search')
+
+	searchToggle.addEventListener('click', function () {
+		searchBar.classList.toggle('--shown')
+	})
+
+
 });
+
+
+
