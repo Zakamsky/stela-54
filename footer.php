@@ -58,14 +58,26 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 					<div class="site-footer__social-links">
 						</br>
 						<h4>Мы в соц. сетях:</h4>
-						<a href="https://vk.com/club123664087"><img src="https://stela-54.ru/wp-content/uploads/2021/02/brand_vk_icon_158634.png"></a> 
-						<a href="https://www.facebook.com/%D0%93%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%BD%D0%B0%D1%8F-%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F-%D0%A1%D1%82%D0%B5%D0%BB%D0%B0-1714422825476518/?ref=bookmarks"><img src="http://stela-54.ru/wp-content/uploads/2021/02/Facebook_icon-icons.com_559141.png"></a>
-						<a href="https://www.instagram.com/stelansk54"><img src="http://stela-54.ru/wp-content/uploads/2021/02/Instagram_icon-icons.com_55882.png"></a>
-					    <a href="https://plus.google.com/+Stela54Runsk/about"><img src="http://stela-54.ru/wp-content/uploads/2021/02/social_media_google_plus_logo_icon_141106.png"></a>
-					 
+                        <div class="social">
+                            <a href="https://vk.com/club123664087" class="social__link" rel="nofollow noopener">
+                                <img src="<?= get_template_directory_uri() ?>/images/icons/vk.svg" width="40">
+                            </a>
+                            <a href="https://ok.ru/profile/579666086476" class="social__link" rel="nofollow noopener">
+                                <img src="<?= get_template_directory_uri() ?>/images/icons/ok.svg" width="40">
+                            </a>
+                            <a href="https://www.instagram.com/stelansk54" class="social__link" rel="nofollow noopener">
+                                <img src="<?= get_template_directory_uri() ?>/images/icons/instagram.svg" width="40">
+                            </a>
+                        </div>
 				</div>
 				</div>
-				<p><img src="https://stela-54.ru/wp-content/uploads/2016/06/stella-255.png"></p>
+				<div class="site-footer__logo">
+                    <a class="logo" id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'description' ) ); ?>">
+                        <span class="logo__title">Стела</span>
+                        <span class="logo__description">Гранитная мастерская</span>
+                    </a>
+<!--                    <img src="https://stela-54.ru/wp-content/uploads/2016/06/stella-255.png">-->
+                </div>
 				<p>
 					<b>Адреса:</b> <br/> г. Новосибирск, ул. Мочищенское шоссе, 5/17,</br>
 					г. Новосибирск, ул. Новоуральская, 121,</br>
