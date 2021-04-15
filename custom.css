@@ -224,7 +224,7 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		height: 46px;
 		z-index: 900;
 		background-color: #ffffff;
-		box-shadow: 0px 1px 12px 3px #676363;
+		box-shadow: 0 1px 6px 0 rgba(103, 99, 99, .2);
 		border: none;
 	}
 	/*if admin:*/
@@ -280,21 +280,18 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		margin: 2px 0 2px auto;
 		width: 46px;
 		height: 42px;
-		border: darkgray 2px solid;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
+		border: none;
 		background-color: #ffffff;
 		background-image: url("images/icons/search.svg");
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: auto 90%;
+		background-size: auto 85%;
 
 	}
 
 	#top .wc-nav li.search{
 		position: fixed;
-		top: 0;
+		top: 0px;
 		left: 0;
 		right: 0;
 		width: 100%;
@@ -303,6 +300,7 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		float: none;
 		display: flex;
 		background-color: #ffffff;
+		opacity: 0;
 		transition: all .3s ease-in-out;
 		z-index: 890;
 	}
@@ -314,8 +312,9 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		flex-grow: 1;
 	}
 	#top .wc-nav li.search.--shown{
-		transform: translateY(46px);
-		box-shadow: 0px 1px 12px 3px #676363;
+		transform: translateY(54px);
+		opacity: 1;
+		box-shadow: 0px -8px 0 #ffffff, 0px 1px 12px 3px #676363;
 	}
 
 
@@ -330,48 +329,77 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		display: flex;
 		margin: 0;
 		padding: 0;
-		height: 46px;
+		height: 55px;
 		z-index: 900;
-		background-color: #ffffff;
-		box-shadow: 0px 1px 12px 3px #676363;
+		background-color: #5bd084;
+	}
+	.site-contacts .mobile-hide{
+		display: none;
 	}
 	.site-contacts>a,
 	.site-contacts>div{
-		flex: 1 1 23%;
+		flex: 1 1 30%;
 	}
-	.site-contacts__link:not(.--call-back){
-		display: block;
-		height: 44px;
-		/*width: 48px;*/
-		margin: 1px auto;
+	.site-contacts>div{
+		border-right: 1px solid #ffffff;
+	}
+	.site-contacts__link.--call-back,
+	.site-contacts__link{
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		margin: 0;
+		padding: 6px;
+		text-shadow: none;
 		font-size: 0;
-		border: darkgray .3px solid;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-		/*background-image: url("images/icons/email.svg");*/
+		color: #ffffff;
+		background: none !important;
+	}
+	.site-contacts__link::before{
+		content: '';
+		display: block;
+		width: 25px;
+		height: 25px;
 		background-repeat: no-repeat;
 		background-position: center;
+		background-size: 100%;
+		background-color: transparent;
+
 	}
-	.site-contacts__link.--email{
-		background-image: url("images/icons/email.svg");
+	.site-contacts__link.--email::before{
+		display: none;
 	}
-	.site-contacts__link.--tel{
-		background-image: url("images/icons/phone-call.svg");
-		background-size: auto 80%;
+	.site-contacts__link.--tel::before{
+		background-image: url("images/icons/icon-call.svg");
+		/*background-size: auto 80%;*/
 	}
-	.site-contacts__link.--whatsapp{
-		background-image: url("images/icons/whatsapp.svg");
-		background-size: auto 115%;
+	.site-contacts__link.--whatsapp::before{
+		background-image: url("images/icons/icon-wa.svg");
+		/*background-size: auto 115%;*/
 	}
-	.site-contacts__link.--call-back{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-basis: 31%;
-		margin: 1px;
-		font-size: 14px;
-		line-height: 1.25em;
+	.site-contacts__link.--call-back::before{
+		background-image: url("images/icons/icon-chat.svg");
+	}
+	.site-contacts__link::after{
+		font-size: 12px;
+		line-height: 1.5;
+		color: #ffffff;
+		text-align: center;
+	}
+	.site-contacts__link.--tel::after{
+		content: 'Позвонить';
+	}
+	.site-contacts__link.--whatsapp::after{
+		content: 'WhatsApp';
+	}
+	.site-contacts__link.--call-back::after{
+		content: 'Обратный звонок';
+		/*font-size: 12px;*/
 	}
 
 	.site-footer__call{
@@ -386,5 +414,18 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 
 	.woocommerce-ordering .orderby{
 		max-width: 100%
+	}
+
+}
+@media (max-width: 395px) {
+	.site-contacts__link::after{
+		font-size: 11px;
+		line-height: 1;
+	}
+}
+@media (max-width: 365px) {
+	.site-contacts__link::after{
+		font-size: 10px;
+		line-height: 1;
 	}
 }

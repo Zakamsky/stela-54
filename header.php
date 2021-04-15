@@ -109,10 +109,16 @@ global $woo_options, $woocommerce;
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			
 			<div class="site-contacts">
-			<div> <a class="site-contacts__link --tel" href="tel:+79137508333">+7 (913) 750-83-33</a> </div>
-			<div> <a class="site-contacts__link --whatsapp" href="whatsapp://send?phone=+79137508333">WhatsApp</a> </div>
-			<div> <a class="site-contacts__link --email" href="mailto:stela-54@yandex.ru">stela-54@yandex.ru</a></div>
-			<a class="button callback-btn site-contacts__link --call-back" id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline" >Заказать звонок</a>
+			<div> <a class="site-contacts__link --tel" href="tel:+79137508333">
+                    <span class="mobile-hide"> +7 (913) 750-83-33</span>
+                </a> </div>
+			<div> <a class="site-contacts__link --whatsapp" href="whatsapp://send?phone=+79137508333">
+                    <span class="mobile-hide"> WhatsApp</span>
+                </a> </div>
+			<div class="mobile-hide" > <a class="site-contacts__link --email" href="mailto:stela-54@yandex.ru">stela-54@yandex.ru</a></div>
+			<a class="button callback-btn site-contacts__link --call-back" id="myButton" data-fancybox data-src="#contact_form_pop" href="#contact_form_pop" class="fancybox-inline" >
+                <span class="mobile-hide">Заказать звонок</span>
+            </a>
 			<div style="display:none" class="fancybox-hidden">
   			<div id="contact_form_pop">
     			<?php echo do_shortcode(' [contact-form-7 id="1218"]'); ?>
