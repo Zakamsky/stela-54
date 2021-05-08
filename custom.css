@@ -496,3 +496,36 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		line-height: 1;
 	}
 }
+
+
+/* styles for page content */
+
+/*.green {
+	color:green;
+}
+.blue{
+	color:blue;
+}*/
+.has-huge-font-size {
+	font-size: 2.244em;
+	line-height: 1.387em;
+	font-family: "Bree Serif", sans-serif;
+	font-weight: normal;
+	color: #363230;
+	margin: 0 0 .618em;
+}
+.has-large-font-size {
+	font-size: 1.618em;
+	line-height: 1.387em;
+	font-family: "Bree Serif", sans-serif;
+	font-weight: normal;
+	color: #363230;
+	margin: 0 0 .618em;
+}
+.features-block img {
+	background: none;
+	border: none;
+}
+.features-block p {
+	text-align: justify;
+}

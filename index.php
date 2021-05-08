@@ -5,7 +5,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 }
 ?><?php
 	if($_SERVER['SERVER_NAME'] == 'c10473.shared.hc.ru') {
-		header('Location: http://stela-54.ru');
+		header('Location: https://stela-54.ru');
 		exit;
 	}
 		
@@ -31,7 +31,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 				if ( $woo_options[ 'woo_homepage_banner' ] == "true" && is_ssl() ) { $banner = preg_replace("/^http:/", "https:", $woo_options['woo_homepage_banner_path']); }
 			?>
 			    <img src="<?php echo $banner; ?>" alt="" />
-    		<h1><span><?php echo $woo_options['woo_homepage_banner_headline']; ?></span></h1>
+<!--    		<h1><span>--><?php //echo $woo_options['woo_homepage_banner_headline']; ?><!--</span></h1>-->
     		<div class="description"><?php echo wpautop($woo_options['woo_homepage_banner_standfirst']); ?></div>
     	</div>
     	
@@ -91,11 +91,14 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		                
 		</section><!-- /#main -->
 		
-		<div class="term-description"><p>
+		<div class="term-description"><!--<p>-->
 			<? $page = get_page_by_path('mainpage_text'); ?>
+<!--			--><?// $page = get_page_by_path('test'); ?>
 			<? //print_r($page) ?>
-			<?= nl2br($page->post_content); ?>
-		</p>
+<!--			--><?//= nl2br($page->post_content); ?>
+                <?= $page->post_content; ?>
+<!--		</p>-->
+            <br>
 		</div>
 		
 		<?php woo_main_after(); ?>

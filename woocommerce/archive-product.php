@@ -30,8 +30,9 @@ get_header( 'shop' ); ?>
 		
 		<? $t_id = get_queried_object()->term_id;
 			$details = get_term_meta( $t_id, 'h1', true );  ?>
-			
-						<h1 class="page-title"><?php if(strlen($details)) echo $details; else woocommerce_page_title(); ?></h1>
+            <!-- pom-pom -->
+						<p class="page-title has-huge-font-size"><?php if(strlen($details)) echo $details; else woocommerce_page_title(); ?></p>
+            <!-- pom-pom -->
 
 		<?php endif; ?>
 
@@ -77,7 +78,7 @@ get_header( 'shop' ); ?>
 		<br>
 		<? $h2title = get_term_meta( $t_id, 'h2', true );  ?>
 		<? if($h2title): ?><h2><?= $h2title ?></h2><? endif; ?>
-
+    <!-- desc? st -->
 		<?php
 			/**
 			 * woocommerce_archive_description hook
@@ -86,7 +87,17 @@ get_header( 'shop' ); ?>
 			 * @hooked woocommerce_product_archive_description - 10
 			 */
 			do_action( 'woocommerce_archive_description' );
-		?>	<?php
+//        the_archive_description();
+
+        $term = get_queried_object();
+
+        // vars
+        $editor = get_field('editor', $term);
+        echo $editor;
+        ?>
+    <!-- desc? end -->
+
+    <?php
 		/**
 		 * woocommerce_after_main_content hook
 		 *
