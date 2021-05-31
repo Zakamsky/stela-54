@@ -30,7 +30,8 @@ $includes = array(
 				'includes/theme-widgets.php',			// Theme widgets
 				'includes/theme-install.php',			// Theme installation
 				'includes/theme-woocommerce.php',		// WooCommerce options
-				'includes/theme-plugin-integrations.php'	// Plugin integrations
+				'includes/theme-plugin-integrations.php',	// Plugin integrations
+				'includes/custom-breadcrumbs.php'	// Plugin integrations
 				);
 
 // Allow child themes/plugins to add widgets to be loaded.
@@ -314,7 +315,12 @@ function wpm_product_cat_display_h1_meta() {
 
 
 
+add_action( 'init', 'stella_custom' );
+function stella_custom() {
+    //add to cart button loop
+    add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
+}
 
 
 

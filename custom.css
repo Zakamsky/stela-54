@@ -529,3 +529,29 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 .features-block p {
 	text-align: justify;
 }
+
+.added_to_cart.wc-forward {
+	display: block;
+	margin-top: 1rem;
+}
+
+.bredcrumbs-container{
+	display: none;
+}
+@media (min-width: 992px){
+	.bredcrumbs-container{
+		display: block;
+	}
+	.breadcrumb{
+		list-style: none;
+		margin-top: 1rem !important;
+		display: flex !important;
+	}
+	.breadcrumb-item{
+		margin-right: 1rem;
+	}
+	.breadcrumb-item:not(:last-child)::after{
+		content: '\003E';
+		margin-left: 1rem;
+	}
+}

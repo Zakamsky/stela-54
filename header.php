@@ -105,8 +105,8 @@ global $woo_options, $woocommerce;
 			    </a>
 		    <?php } ?>
 
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+<!--			<h1 class="site-title"><a href="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">--><?php //bloginfo( 'name' ); ?><!--</a></h1>-->
+<!--			<h2 class="site-description">--><?php //bloginfo( 'description' ); ?><!--</h2>-->
 			
 			<div class="site-contacts">
 			<div> <a class="site-contacts__link --tel" href="tel:+79137508333">
@@ -150,6 +150,14 @@ global $woo_options, $woocommerce;
 
 		<?php woo_nav_after(); ?>
 
+
+
 	</header><!-- /#header -->
+
+    <?php if ( !is_front_page() && !is_home() ) : ?>
+        <div class="bredcrumbs-container col-full">
+            <?php custom_breadcrumbs() ?>
+        </div>
+    <?php endif; ?>
 
 	<?php woo_content_before(); ?>
