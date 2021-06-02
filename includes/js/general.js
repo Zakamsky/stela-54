@@ -49,21 +49,33 @@ jQuery(document).ready(function($){
 	// submenu to menu:
 
 
-	const colFull = document.querySelector('.col-full')
+	const colFull = document.querySelector('nav.col-full')
 	const topNav = document.getElementById('top-nav')
 	const navigation = document.getElementById('navigation')
 
 	const footer = document.querySelector('.site-footer')
 	const socialLinks = document.querySelector('.site-footer__social-links')
 
+	const cartLink = document.querySelector('#wpmenucartli')
+	const logo = document.querySelector('#logo')
+	const mobHeader = document.querySelector('#header>hgroup')
+	const mainNav = document.querySelector('#main-nav')
+	console.log('### cartLink: ',cartLink);
+	console.log('### mobHeader: ',mobHeader);
+	console.log('### logo: ',logo);
+	console.log('### wpmenucartli: ',wpmenucartli);
+
+
 	const mobileMenuConstructor = function() {
 		if (document.documentElement.clientWidth <= 767){
 			navigation.appendChild(topNav)
 			navigation.appendChild(socialLinks)
 			navigation.style.display = 'none'
+			mobHeader.prepend(logo, cartLink)
 		} else {
 			colFull.prepend(topNav)
 			footer.appendChild(socialLinks)
+			mainNav.appendChild(cartLink)
 		}
 	}
 

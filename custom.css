@@ -342,9 +342,9 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 	/* search button and search bar */
 	#header .search-toggle{
 		display: block;
-		margin: 2px 0 2px auto;
-		width: 46px;
-		height: 42px;
+		margin: 8px ;
+		width: 32px;
+		height: 32px;
 		border: none;
 		background-color: #ffffff;
 		background-image: url("images/icons/search.svg");
@@ -554,4 +554,38 @@ br + input[type="submit"].wpcf7-form-control.wpcf7-submit {
 		content: '\003E';
 		margin-left: 1rem;
 	}
+}
+
+
+.cartcontents{
+	font-size: 0;
+}
+.cartcontents:first-letter{
+	font-size: 16px;
+}
+
+#header > hgroup > li {
+	list-style: none;
+}
+hgroup .wpmenucartli{
+	padding: .3rem;
+	margin-left: auto;
+}
+hgroup .wpmenucart-contents{
+	font-size: 23px;
+}
+
+ul.products {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul.products li.product {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 48px;
+}
+
+ul.products li.product .add_to_cart_button{
+	margin-top: auto;
 }
