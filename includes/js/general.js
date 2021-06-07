@@ -60,10 +60,6 @@ jQuery(document).ready(function($){
 	const logo = document.querySelector('#logo')
 	const mobHeader = document.querySelector('#header>hgroup')
 	const mainNav = document.querySelector('#main-nav')
-	console.log('### cartLink: ',cartLink);
-	console.log('### mobHeader: ',mobHeader);
-	console.log('### logo: ',logo);
-	console.log('### wpmenucartli: ',wpmenucartli);
 
 
 	const mobileMenuConstructor = function() {
@@ -93,7 +89,6 @@ jQuery(document).ready(function($){
 	searchToggle.addEventListener('click', function () {
 		searchBar.classList.toggle('--shown')
 	})
-
 
 });
 
